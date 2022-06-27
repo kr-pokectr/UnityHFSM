@@ -118,8 +118,6 @@ namespace FSM
 				ChangeState(pendingState.state);
 				pendingState = (default, false);
 			}
-
-			fsm?.StateCanExit();
 		}
 
 		public override void RequestExit()
@@ -129,8 +127,6 @@ namespace FSM
 				activeState.RequestExit();
 				return;
 			}
-
-			fsm?.StateCanExit();
 		}
 
 		/// <summary>
